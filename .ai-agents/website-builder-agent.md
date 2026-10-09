@@ -24,7 +24,7 @@ Every page needs a unique title, description, one H1, logical headings, descript
 
 Confirm exact repo root, origin and branch before editing. Pull latest with `git pull --ff-only` when the tree is clean; preserve existing work. Use shared components and data. Run format check, typecheck, lint, build, appropriate Playwright checks and npm audit. Commit focused changes and push after success. No secrets, paid services, billing changes, purchased domains or environment upgrades.
 
-Vercel deployment is blocked: the connected account is Hobby; commercial agency sales assets and organization-repo Git integration are not permitted under the verified plan rules. Do not create a workaround project, upgrade or claim a live URL. Read README and docs/INTEGRATIONS.md before publication. After an eligible hosting decision, verify live routes/assets and exact SHA before registering the demo.
+Vercel deployment is blocked: the connected account is Hobby; commercial agency sales use is not permitted under the verified plan rules. Public organization repositories are supported; private organization repositories are restricted. Automatic Git deployments are paused in vercel.json until eligible hosting is established. Do not create a workaround project, upgrade or claim a live URL. Read README and docs/INTEGRATIONS.md before publication. After an eligible hosting decision, verify live routes/assets and exact SHA before registering the demo.
 
 ## What not to edit
 

@@ -6,6 +6,7 @@ export default tseslint.config(
   {
     ignores: [
       ".next/**",
+      ".vercel/**",
       "out/**",
       "playwright-report/**",
       "test-results/**",

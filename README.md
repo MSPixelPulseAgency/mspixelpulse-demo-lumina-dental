@@ -94,20 +94,31 @@ git push origin main
 
 ## Production deployment and current restriction
 
-**No Vercel project or Git integration was created, and there is no production URL.** The connected Vercel scope was verified as Hobby on 9 October 2026. This project’s intended use is an agency portfolio/sales asset. Vercel’s current [fair-use guidelines](https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage) restrict Hobby to non-commercial personal use; its [Git limits](https://vercel.com/docs/limits#connecting-a-project-to-a-git-repository) also prohibit connecting Hobby to organization-owned repositories. The brief explicitly requires stopping deployment in this case. Do not upgrade, change billing or work around those restrictions.
+The existing Vercel project is `mspixelpulse-demo-lumina-dental` (`prj_lOlpC873BALetxkD4YPRog5o7ECg`) in `mahak-patels-projects`. It is connected to this public GitHub repository and production branch `main`. The initial import at `70162cb` failed during deployment processing; there is no verified live production website.
 
-`vercel.json` is prepared with the actual **Next.js** framework, `npm ci`, `npm run build`, and `out/` export directory. It is configuration only, not evidence of a connected project. The original generic Vite defaults do not apply to this project’s explicitly requested Next.js stack.
+### Output-directory repair
 
-After the owner selects an eligible hosting arrangement:
+Keep `next.config.ts` with `output: "export"`, unoptimized images and trailing slashes. `npm run build` continues to export all 24 content pages and their assets to `out/`. Next.js also generates its build manifests, including `routes-manifest.json`, in the default `.next/` build directory.
 
-1. Verify the authorized account, plan, repository and exact `main` SHA.
-2. Use a supported Git integration for `MSPixelPulseAgency/mspixelpulse-demo-lumina-dental` where the provider permits it. Do not duplicate or transfer the repository to evade plan limits.
-3. Set the public `NEXT_PUBLIC_SITE_URL` to the actual verified origin before building; this configures social-image URL resolution and the sitemap. It is not a secret. Until then local metadata resolves to `http://localhost:3000` and the sitemap is intentionally empty.
-4. Build and publish `out/`, preserving directory routes, `404.html` and static assets.
-5. Verify the canonical live origin, all pages, forms, image loading and deployment SHA. Only then update the README’s URL, portfolio listing and Aurelion registration.
-6. On a permitted Vercel Git integration, pushes to `main` can trigger production builds; other branches can create previews. Currently **GitHub pushes do not deploy** because no integration is connected.
+Vercel's **Next.js** framework adapter needs that `.next/` metadata before packaging the static export. Setting its Output Directory to `out` incorrectly made the adapter look for `out/routes-manifest.json`. The repair removes `outputDirectory` from `vercel.json` and clears the existing project's dashboard override. Framework remains `nextjs`; Root Directory is the repository root; commands remain `npm ci` and `npm run build`. Do not restore the `out` override or copy manifests into it. `out/` remains the correct published directory for a plain static host, not the Next.js adapter's manifest directory.
 
-Search indexing is disabled through page `noindex, nofollow`, `robots.txt`, and prepared hosting headers. No real-business LocalBusiness schema, fake reviews or patient-result markup is used.
+### Hosting gate and automatic deployments
+
+The connected scope was rechecked as **Hobby** on 9 October 2026. This project's intended use is an agency portfolio/sales asset. Vercel's [fair-use guidelines](https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage) restrict Hobby to non-commercial personal use. The brief explicitly requires stopping deployment in this case. Do not upgrade, change billing or work around that restriction.
+
+Correction to the initial setup notes: [public organization repositories are supported](https://vercel.com/docs/git#using-hobby-teams); the organization restriction applies to private repositories. The commercial-use restriction is the current blocker.
+
+`git.deploymentEnabled: false` in `vercel.json` intentionally pauses automatic Git deployments so pushing this repair does not publish an ineligible agency demo. Local builds and the GitHub connection remain usable. Do not manually redeploy or re-enable automatic deployments until the hosting restriction is resolved.
+
+After an eligible hosting decision:
+
+1. Reuse this existing Vercel project; verify account, plan, repository and exact `main` SHA. Do not create another project or transfer the repo to evade limits.
+2. Keep Framework **Next.js**, Output Directory **automatic/default** (no override), and Root Directory **./**.
+3. Set `NEXT_PUBLIC_SITE_URL` to the actual verified production origin before building. It is public configuration, not a secret. Until then metadata resolves to `http://localhost:3000` and the sitemap is intentionally empty.
+4. Remove the automatic-deployment pause only after publication is permitted, then stage/redeploy the exact checked commit through the existing project.
+5. Verify the canonical live origin, all 24 pages, 404, forms, assets and deployment SHA. Only then update this README, portfolio listing and Aurelion registration.
+
+Search indexing remains disabled through page `noindex, nofollow`, `robots.txt`, and hosting headers. No real-business LocalBusiness schema, fake reviews or patient-result markup is used.
 
 ## Design, assets and integration handoff
 

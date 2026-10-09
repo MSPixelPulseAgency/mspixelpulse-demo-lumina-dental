@@ -22,7 +22,19 @@ Verified locally on 9 October 2026 against the production static export unless n
 | Local setup           | Port 3000 returned HTTP 200; VS Code status identified the LUMINA folder in its own workspace; actual edit/save Fast Refresh and source restoration verified          |
 | Stop/restart          | Managed stop script successfully stopped only the LUMINA process group; server restarted at localhost:3000                                                            |
 
-Final Playwright rerun: **18 passed (2.9 minutes)** against implementation commit `35af160`. This includes 192 page/viewport checks and 48 automated accessibility scans. The targeted date/no-JavaScript regression also passed independently before the complete rerun.
+Original implementation QA: **18 passed (2.9 minutes)** against implementation commit `35af160`. This includes 192 page/viewport checks and 48 automated accessibility scans. The targeted date/no-JavaScript regression also passed independently before the complete rerun.
+
+## Output-directory repair verification
+
+The existing project's initial deployment `dpl_9dQkd2VNUV9bffWcNuuqBh59jnra` failed after compilation at `70162cb`: the adapter searched for `/vercel/path0/out/routes-manifest.json`. Both repository and dashboard output overrides were `out`; Next.js actually puts that manifest in `.next/`.
+
+- Removed the repository output override and reset the existing project's Output Directory to automatic/default. Framework remains Next.js; root remains repository root; static export stays enabled.
+- Stopped only the managed LUMINA dev server, removed generated `.next/`, `out/` and `.vercel/output/`, then ran `vercel build --prod` against the exact existing project. Its internal `npm run build` generated all 28 static outputs and the adapter completed successfully.
+- Build Output API version 3, with zero function directories. All 24 content HTML pages and 404 are packaged unchanged, and all 34 public assets match source bytes.
+- TypeScript, lint, formatting and diff checks passed. Ignore `.vercel/` in lint and formatting so generated bundles and downloaded environment files are excluded.
+- Repair browser regression suite: **18 passed (3.1 minutes)**, including 192 page/viewport checks, 48 accessibility scans, route/asset loading, navigation and safe appointment interactions.
+- The production address returned HTTP 404 / `DEPLOYMENT_NOT_FOUND`. No successful production deployment or live-site verification is claimed. Automatic Git deployments are deliberately paused while the Hobby commercial-use restriction remains.
+- Website source, assets, Next config, package versions and lockfile are unchanged. The local dev server was restarted on port 3000 after the clean build.
 
 ## Visual review
 
@@ -42,4 +54,4 @@ The production site is static, with locally bundled open fonts, responsive WebP 
 
 Browser viewport emulation does not establish physical-device behavior. Automated axe checks do not establish full WCAG certification. Field performance and live-provider route behavior cannot be verified before actual publication.
 
-Production deployment is blocked by the verified Vercel Hobby commercial-use and organization-repository restrictions, as required by the brief. There is no production URL, deployment SHA, live website QA, published portfolio card or Published Aurelion registration. See [the integration handoff](INTEGRATIONS.md).
+Production deployment is blocked by the verified Vercel Hobby commercial-use restriction, as required by the brief. There is no verified live website, successful production deployment SHA, live website QA, published portfolio card or Published Aurelion registration. See [the integration handoff](INTEGRATIONS.md).

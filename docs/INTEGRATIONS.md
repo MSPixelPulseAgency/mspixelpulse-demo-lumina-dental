@@ -7,9 +7,9 @@ Status checked 9 October 2026. The website is implemented locally; **production 
 Connected Vercel scope: `mahak-patels-projects` (`team_zccbJjixiq0C3YRhUkZlSnF9`), plan **Hobby**. The brief defines this as an MSPixelPulse portfolio and sales asset and explicitly requires stopping if that use is not permitted on Hobby.
 
 - https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage restricts Hobby to non-commercial personal use; financial-gain/service-advertising use is commercial.
-- https://vercel.com/docs/limits#connecting-a-project-to-a-git-repository prohibits Hobby Git integration with organization repositories.
+- Correction: https://vercel.com/docs/git#using-hobby-teams permits public organization repositories. Its organization restriction applies to private repositories; that is not the blocker for this public repo.
 
-No project was created, no deployment was made, no billing changed, and no plan/domain was purchased. `lumina-dental.vercel.app` is only the brief’s preferred hostname, not an assigned or verified URL. An owner decision on eligible hosting is required before publication.
+The original setup session created no Vercel project or deployment. A later dashboard import created the existing `mspixelpulse-demo-lumina-dental` project (`prj_lOlpC873BALetxkD4YPRog5o7ECg`), linked to this repo and main. Deployment `dpl_9dQkd2VNUV9bffWcNuuqBh59jnra` at `70162cb` failed because both Vercel configuration and dashboard settings overrode the Next.js build directory with `out`. The repair clears both overrides, preserves static export, and pauses automatic Git deployments while the commercial-use restriction remains. No new project, billing change, plan upgrade or domain purchase was made. `lumina-dental.vercel.app` is only the brief’s preferred hostname, not an assigned or verified URL. An owner decision on eligible hosting is required before publication.
 
 ## MSPixelPulse Projects page
 

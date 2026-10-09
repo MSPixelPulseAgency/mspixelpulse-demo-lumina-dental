@@ -1,5 +1,6 @@
 node_modules
 .next
+.vercel
 out
 package-lock.json
 playwright-report
