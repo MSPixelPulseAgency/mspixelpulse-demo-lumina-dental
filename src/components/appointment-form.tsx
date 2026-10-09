@@ -182,12 +182,12 @@ export function AppointmentForm() {
           Please do not enter health information or real contact details.
         </p>
       </div>
-      <noscript>
+      {!hydrated && (
         <p className="form-demo-note">
           This sample interaction requires JavaScript. The form is disabled so
           no information can be submitted.
         </p>
-      </noscript>
+      )}
       <fieldset disabled={!hydrated}>
         <legend className="sr-only">Sample appointment details</legend>
         <button type="button" className="sample-button" onClick={sample}>
