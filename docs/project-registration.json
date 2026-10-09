@@ -1,0 +1,28 @@
+{
+  "projectName": "LUMINA Dental Studio",
+  "slug": "lumina-dental-studio",
+  "category": "Healthcare",
+  "subcategory": "Dental Clinics",
+  "description": "Premium dental clinic website concept featuring modern design, responsive layouts, service discovery and a demonstration appointment experience.",
+  "github": "https://github.com/MSPixelPulseAgency/mspixelpulse-demo-lumina-dental",
+  "liveUrl": null,
+  "thumbnailFile": "public/brand/project-preview.webp",
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Motion",
+    "Lucide"
+  ],
+  "deploymentStatus": "BLOCKED_HOSTING_PLAN",
+  "portfolioRegistrationStatus": "PENDING_VERIFIED_PUBLIC_URL",
+  "aurelionRegistrationStatus": "PENDING_VERIFIED_PUBLIC_URL",
+  "aurelionMapping": {
+    "parentId": "healthcare-wellness",
+    "categoryId": "dentists",
+    "label": "Dental Clinic"
+  },
+  "demoOnly": true,
+  "preserveManualDemoChoices": true
+}
