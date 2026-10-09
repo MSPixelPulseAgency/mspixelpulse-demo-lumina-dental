@@ -94,7 +94,7 @@ git push origin main
 
 ## Production deployment and current restriction
 
-The existing Vercel project is `mspixelpulse-demo-lumina-dental` (`prj_lOlpC873BALetxkD4YPRog5o7ECg`) in `mahak-patels-projects`. It is connected to this public GitHub repository and production branch `main`. The initial import at `70162cb` failed during deployment processing; there is no verified live production website.
+The existing Vercel project is `mspixelpulse-demo-lumina-dental` (`prj_degeuzj9Mh34YuMZxqkNWHmITgqN`) in `mahak-patels-projects`. It is connected to this public GitHub repository and production branch `main`. The initial import at `70162cb` failed during deployment processing; there is no verified live production website.
 
 ### Output-directory repair
 

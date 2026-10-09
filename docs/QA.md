@@ -34,7 +34,7 @@ The existing project's initial deployment `dpl_9dQkd2VNUV9bffWcNuuqBh59jnra` fai
 - TypeScript, lint, formatting and diff checks passed. Ignore `.vercel/` in lint and formatting so generated bundles and downloaded environment files are excluded.
 - Repair browser regression suite: **18 passed (3.1 minutes)**, including 192 page/viewport checks, 48 accessibility scans, route/asset loading, navigation and safe appointment interactions.
 - The production address returned HTTP 404 / `DEPLOYMENT_NOT_FOUND`. No successful production deployment or live-site verification is claimed. Automatic Git deployments are deliberately paused while the Hobby commercial-use restriction remains.
-- Website source, assets, Next config, package versions and lockfile are unchanged. The local dev server was restarted on port 3000 after the clean build.
+- Website source, assets, Next config, package versions and lockfile are unchanged. The local dev server was restarted on port 3000 after the clean build. When the provider project was externally replaced, the output setting and local link were refreshed to current project `prj_degeuzj9Mh34YuMZxqkNWHmITgqN` and its local production packaging was rechecked.
 
 ## Visual review
 
