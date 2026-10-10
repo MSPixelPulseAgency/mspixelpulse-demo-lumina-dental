@@ -129,7 +129,8 @@ See [design notes](docs/DESIGN.md), [asset licences](docs/ASSET-LICENSES.md), [Q
 ## Website and demo management
 
 - **Live Website:** [https://dental.mspixelpulse.com](https://dental.mspixelpulse.com)
+- **Original Vercel URL (fallback):** [https://demo-lumina-dental.vercel.app](https://demo-lumina-dental.vercel.app)
 - **MSPixelPulse Projects:** [MSPixelPulse Projects](https://mspixelpulse.com/projects)
 - **Aurelion Demo Library:** [Private Demo Management — Owner Access Required](https://mahakpatel.com/play/ai?view=demo-library)
 
-Category subdomains are not published here until their HTTPS website is verified. The Aurelion link is an owner-only management interface and does not grant access.
+The category subdomain is the primary public demo link; the original Vercel address stays available as a fallback. The Aurelion link is an owner-only management interface and does not grant access.
