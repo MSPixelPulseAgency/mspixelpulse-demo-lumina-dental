@@ -123,3 +123,11 @@ Search indexing remains disabled through page `noindex, nofollow`, `robots.txt`,
 ## Design, assets and integration handoff
 
 See [design notes](docs/DESIGN.md), [asset licences](docs/ASSET-LICENSES.md), [QA evidence](docs/QA.md), and [integration handoff](docs/INTEGRATIONS.md). Desktop/mobile screenshots are in `docs/screenshots/`. Public listing metadata is prepared in `docs/project-registration.json`; its live URL remains `null` until actual publication. The existing MSPixelPulse Projects list and Aurelion database have not been edited.
+
+## Website and demo management
+
+- **Live Website:** Pending — no verified production URL. LUMINA remains unpublished until eligible hosting and public verification are complete.
+- **MSPixelPulse Projects:** [MSPixelPulse Projects](https://mspixelpulse.com/projects)
+- **Aurelion Demo Library:** [Private Demo Management — Owner Access Required](https://mahakpatel.com/play/ai?view=demo-library)
+
+Category subdomains are not published here until their HTTPS website is verified. The Aurelion link is an owner-only management interface and does not grant access.
