@@ -5,7 +5,7 @@ An original premium dental-studio **website demonstration** by MSPixelPulse. Fic
 - Authoritative local folder: `/Users/mahak/Documents/MSPixelPulse/Lumina-Dental-Studio`
 - GitHub: https://github.com/MSPixelPulseAgency/mspixelpulse-demo-lumina-dental
 - Local development: http://localhost:3000
-- Production URL: **not deployed — Vercel Hobby compliance restriction**
+- Production URL: https://dental.mspixelpulse.com
 - Stack: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Motion, Lucide.
 - Package manager: npm. Commit `package-lock.json`; use `npm ci` for reproducible installs.
 
@@ -104,6 +104,8 @@ Vercel's **Next.js** framework adapter needs that `.next/` metadata before packa
 
 ### Hosting gate and automatic deployments
 
+Current publication update: the existing owning team is now Vercel Pro. The following Hobby check records the historical pre-publication state. Publication at the verified URL above has passed the hosting and website verification gates; retain `git.deploymentEnabled: false` until the separate approved automatic-deployment decision is executed.
+
 The connected scope was rechecked as **Hobby** on 9 October 2026. This project's intended use is an agency portfolio/sales asset. Vercel's [fair-use guidelines](https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage) restrict Hobby to non-commercial personal use. The brief explicitly requires stopping deployment in this case. Do not upgrade, change billing or work around that restriction.
 
 Correction to the initial setup notes: [public organization repositories are supported](https://vercel.com/docs/git#using-hobby-teams); the organization restriction applies to private repositories. The commercial-use restriction is the current blocker.
@@ -126,7 +128,7 @@ See [design notes](docs/DESIGN.md), [asset licences](docs/ASSET-LICENSES.md), [Q
 
 ## Website and demo management
 
-- **Live Website:** Pending — no verified production URL. LUMINA remains unpublished until eligible hosting and public verification are complete.
+- **Live Website:** [https://dental.mspixelpulse.com](https://dental.mspixelpulse.com)
 - **MSPixelPulse Projects:** [MSPixelPulse Projects](https://mspixelpulse.com/projects)
 - **Aurelion Demo Library:** [Private Demo Management — Owner Access Required](https://mahakpatel.com/play/ai?view=demo-library)
 
